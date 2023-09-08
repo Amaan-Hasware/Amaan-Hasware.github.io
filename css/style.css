@@ -19,6 +19,7 @@
     --success: #1ecab8;
     --danger: #f1646c;
     --dark-blue: #28365f;
+    --spotify:#1DB954;
 }
 
 /* RESET */
@@ -41,8 +42,9 @@ h1,h2,h3,h4,h5,h6{
 
 .container{
     max-width: 1140px;
-    max-height:1000px;
+    max-height:1500px;
     margin:0 auto;
+    margin-bottom: 50px;
 }
 
 nav{
@@ -195,6 +197,9 @@ section.profile .right ul.socials li:nth-child(4) a{
 }
 section.profile .right ul.socials li:nth-child(5) a{
     background: var(--twitter);
+}
+section.profile .right ul.socials li:nth-child(6) a{
+    background: var(--spotify);
 }
 
 .section__heading{
@@ -424,6 +429,16 @@ section.skills .skills__wrapper .skill-box .progress__wrap .progress__bar4{
     transition: all 1s ease-in-out;
 }
 
+section.skills .skills__wrapper .skill-box .progress__wrap .progress__bar5{
+    display: block;
+    height: 100%;
+    background: var(--info);
+    /* width: 0; */
+    width: 32%;
+    position: relative;
+    transition: all 1s ease-in-out;
+}
+
 section.skills .skills__wrapper .skill-box .progress__wrap .progress__bar1 .tooltip{
     position: absolute;
     right: -15px;
@@ -453,6 +468,15 @@ section.skills .skills__wrapper .skill-box .progress__wrap .progress__bar3 .tool
     text-transform: uppercase;
 }
 section.skills .skills__wrapper .skill-box .progress__wrap .progress__bar4 .tooltip{
+    position: absolute;
+    right: -15px;
+    top: -30px;
+    margin-bottom: 10px;
+    color: var(--ternary);
+    font-size: 16px;
+    text-transform: uppercase;
+}
+section.skills .skills__wrapper .skill-box .progress__wrap .progress__bar5 .tooltip{
     position: absolute;
     right: -15px;
     top: -30px;
