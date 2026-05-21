@@ -1,0 +1,56 @@
+<section id="achievements" class="achievements">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="section-tag">// recognition &amp; highlights</span>
+      <h2 class="section-title">Achievements &amp; <span class="gradient-text">Awards</span></h2>
+      <p class="section-subtitle">Recognition received at Deloitte and the projects that drove real impact.</p>
+    </div>
+
+    <div class="ach-bento">
+
+      <!-- Hero card — Outstanding Award -->
+      <div class="ach-hero glass-card reveal" [attr.data-color]="featured.color">
+        <div class="hero-top">
+          <span class="ach-badge">{{ featured.issuer }} · {{ featured.year }}</span>
+          <ng-icon [name]="featured.icon" class="hero-icon"></ng-icon>
+        </div>
+
+        <h3 class="hero-title">{{ featured.title }}</h3>
+        <p class="hero-desc">{{ featured.description }}</p>
+
+        <div class="hero-impact">
+          <ng-icon name="heroArrowTrendingUp" size="14"></ng-icon>
+          {{ featured.impact }}
+        </div>
+
+        <div class="ach-tags">
+          @for (tag of featured.tags; track tag) {
+            <span class="ach-tag">{{ tag }}</span>
+          }
+        </div>
+      </div>
+
+      <!-- Secondary cards -->
+      <div class="ach-secondary">
+        @for (item of secondary; track item.title; let i = $index) {
+          <div class="ach-card glass-card reveal" [class]="'delay-' + (i + 1)" [attr.data-color]="item.color">
+            <div class="card-top-row">
+              <ng-icon [name]="item.icon" class="ach-icon"></ng-icon>
+              <span class="metric-pill">{{ item.metric }}</span>
+            </div>
+            <p class="card-issuer">{{ item.issuer }}</p>
+            <h4 class="card-title">{{ item.title }}</h4>
+            <p class="card-desc">{{ item.description }}</p>
+            <div class="ach-tags">
+              @for (tag of item.tags; track tag) {
+                <span class="ach-tag">{{ tag }}</span>
+              }
+            </div>
+          </div>
+        }
+      </div>
+
+    </div>
+  </div>
+</section>

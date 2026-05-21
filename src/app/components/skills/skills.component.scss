@@ -1,0 +1,90 @@
+.skills { background: var(--bg-primary); }
+
+/* Bento grid — 2 columns base */
+.skills-bento {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Layout: AI (tall left), Angular (top-right), Backend (bottom-right), RPA (full-width bottom) */
+.cat-tall   { grid-row: span 2; }
+.cat-wide   { grid-column: span 2; }
+.cat-normal { /* default 1×1 */ }
+
+.skill-card {
+  padding: 1.75rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  &[data-color='purple'] { --cc: var(--accent-purple); }
+  &[data-color='blue']   { --cc: var(--accent-blue); }
+  &[data-color='green']  { --cc: #22c55e; }
+  &[data-color='cyan']   { --cc: var(--accent-cyan); }
+
+  &:hover {
+    border-color: var(--cc) !important;
+    box-shadow: 0 0 0 1px var(--cc), var(--shadow-card);
+  }
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cat-icon { font-size: 1.5rem; line-height: 1; flex-shrink: 0; color: var(--cc); }
+
+.cat-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.cat-desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  flex: 1;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.32rem 0.7rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  transition: var(--transition);
+
+  i { font-size: 0.9rem; }
+  .sk-icon { font-size: 0.85rem; line-height: 1; color: var(--cc); }
+
+  &:hover {
+    color: var(--text-primary);
+    border-color: var(--cc);
+    background: rgba(255,255,255,0.08);
+  }
+}
+
+/* Wide card lays tags in more columns */
+.cat-wide .skill-tags { column-gap: 0.625rem; }
+
+@media (max-width: 700px) {
+  .skills-bento {
+    grid-template-columns: 1fr;
+  }
+  .cat-tall, .cat-wide { grid-row: unset; grid-column: unset; }
+}
