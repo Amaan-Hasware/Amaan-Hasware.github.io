@@ -1,0 +1,72 @@
+<section id="experience" class="experience">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="section-tag">// where I've worked</span>
+      <h2 class="section-title">Professional <span class="gradient-text">Experience</span></h2>
+    </div>
+
+    <div class="exp-wrapper">
+
+      <!-- Company header -->
+      <div class="company-card glass-card reveal">
+        <div class="company-left">
+          <div class="company-logo">D</div>
+          <div>
+            <h3 class="company-name">Deloitte</h3>
+            <p class="company-sub">Global Professional Services · Technology Consulting</p>
+          </div>
+        </div>
+        <div class="company-right">
+          <span class="exp-role">Software Engineer</span>
+          <span class="exp-meta">
+            <ng-icon name="heroClock" size="13"></ng-icon>
+            Feb 2024 – Present · 1 yr+
+          </span>
+          <span class="exp-meta">
+            <ng-icon name="heroMapPin" size="13"></ng-icon>
+            Pune, India
+          </span>
+        </div>
+      </div>
+
+      <!-- Timeline -->
+      <div class="timeline">
+
+        @for (domain of domains; track domain.label; let i = $index; let last = $last) {
+          <div class="timeline-item reveal" [class]="'delay-' + (i + 1)">
+            <div class="tl-connector">
+              <div class="tl-dot" [attr.data-color]="domain.color"></div>
+              @if (!last) { <div class="tl-line"></div> }
+            </div>
+            <div class="tl-card glass-card" [attr.data-color]="domain.color">
+              <div class="tl-header">
+                <ng-icon [name]="domain.icon" class="tl-icon"></ng-icon>
+                <div>
+                  <h4 class="tl-title">{{ domain.label }}</h4>
+                </div>
+              </div>
+              <ul class="tl-points">
+                @for (pt of domain.points; track pt.bullet) {
+                  <li>{{ pt.bullet }}</li>
+                }
+              </ul>
+            </div>
+          </div>
+        }
+
+      </div>
+
+      <!-- Education strip -->
+      <div class="edu-strip glass-card reveal">
+        <ng-icon name="heroAcademicCap" class="edu-icon"></ng-icon>
+        <div class="edu-body">
+          <p class="edu-degree">Bachelor of Science in Information Technology</p>
+          <p class="edu-school">South Indian Education Society Of Arts, Commerce &amp; Science · Nerul, Navi Mumbai</p>
+        </div>
+        <span class="edu-date">2020 – 2023</span>
+      </div>
+
+    </div>
+  </div>
+</section>

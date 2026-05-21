@@ -1,0 +1,30 @@
+<nav class="navbar" [class.scrolled]="isScrolled">
+  <div class="nav-container">
+
+    <a class="nav-logo" href="#hero" (click)="closeMenu()">
+      <span class="bracket">&lt;</span>AH<span class="bracket">/&gt;</span>
+    </a>
+
+    <ul class="nav-links" [class.open]="menuOpen">
+      @for (link of navLinks; track link.label) {
+        <li>
+          <a [href]="link.href"
+             [class.active]="activeSection === link.href.slice(1)"
+             (click)="closeMenu()">
+            {{ link.label }}
+          </a>
+        </li>
+      }
+      <li>
+        <a href="mailto:haswareamaan2003@gmail.com" class="hire-btn" (click)="closeMenu()">
+          Contact Me
+        </a>
+      </li>
+    </ul>
+
+    <button class="hamburger" (click)="toggleMenu()" [class.open]="menuOpen" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</nav>
