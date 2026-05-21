@@ -1,0 +1,77 @@
+import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { provideRouter } from '@angular/router';
+import { provideIcons } from '@ng-icons/core';
+import {
+  heroAcademicCap,
+  heroAdjustmentsHorizontal,
+  heroArrowPath,
+  heroArrowTrendingUp,
+  heroArrowUpRight,
+  heroBolt,
+  heroBriefcase,
+  heroBuildingOffice,
+  heroChatBubbleLeftRight,
+  heroCheckBadge,
+  heroChartBar,
+  heroClipboardDocumentList,
+  heroClock,
+  heroCog6Tooth,
+  heroCommandLine,
+  heroCpuChip,
+  heroDocumentText,
+  heroEnvelope,
+  heroLink,
+  heroMapPin,
+  heroNewspaper,
+  heroPaperAirplane,
+  heroRocketLaunch,
+  heroSparkles,
+  heroStar,
+  heroTrophy,
+  heroUsers,
+  heroWrenchScrewdriver,
+} from '@ng-icons/heroicons/outline';
+import { simpleLinkedin, simpleGithub, simpleYoutube, simpleSpotify } from '@ng-icons/simple-icons';
+
+import { routes } from './app.routes';
+
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideRouter(routes),
+    provideIcons({
+      heroAcademicCap,
+      heroAdjustmentsHorizontal,
+      heroArrowPath,
+      heroArrowTrendingUp,
+      heroArrowUpRight,
+      heroBolt,
+      heroBriefcase,
+      heroBuildingOffice,
+      heroChatBubbleLeftRight,
+      heroCheckBadge,
+      heroChartBar,
+      heroClipboardDocumentList,
+      heroClock,
+      heroCog6Tooth,
+      heroCommandLine,
+      heroCpuChip,
+      heroDocumentText,
+      heroEnvelope,
+      heroLink,
+      heroMapPin,
+      heroNewspaper,
+      heroPaperAirplane,
+      heroRocketLaunch,
+      heroSparkles,
+      heroStar,
+      heroTrophy,
+      heroUsers,
+      heroWrenchScrewdriver,
+      simpleLinkedin,
+      simpleGithub,
+      simpleYoutube,
+      simpleSpotify,
+    }),
+  ]
+};
