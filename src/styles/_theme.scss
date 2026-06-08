@@ -1,48 +1,22 @@
-/* ================================================
-   THEME FILE — Edit here to retheme the entire site
-   ================================================ */
 :root {
-  /* Backgrounds */
-  --bg-primary: #070b14;
-  --bg-secondary: #0d1526;
-  --bg-card: rgba(255, 255, 255, 0.04);
-  --bg-card-hover: rgba(255, 255, 255, 0.07);
+  --bg:            #0d0c0b;
+  --bg-soft:       #141310;
 
-  /* Accent Colors */
-  --accent-blue: #3b82f6;
-  --accent-purple: #8b5cf6;
-  --accent-cyan: #06b6d4;
-  --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
-  --accent-gradient-text: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+  --text:          #f0ece4;
+  --text-muted:    #7a756c;
+  --text-faint:    #3e3b36;
 
-  /* Text */
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
+  --accent:        #c9a96e;
+  --accent-dim:    rgba(201, 169, 110, 0.15);
 
-  /* Borders */
-  --border-color: rgba(148, 163, 184, 0.1);
-  --border-active: rgba(59, 130, 246, 0.5);
+  --rule:          rgba(240, 236, 228, 0.10);
+  --rule-accent:   rgba(201, 169, 110, 0.35);
 
-  /* Effects */
-  --glow-blue: 0 0 40px rgba(59, 130, 246, 0.25);
-  --glow-purple: 0 0 40px rgba(139, 92, 246, 0.25);
-  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --font-display:  'Cormorant Garamond', Georgia, serif;
+  --font-body:     'DM Sans', system-ui, sans-serif;
 
-  /* Spacing */
-  --section-padding: 6rem 0;
-  --container-max: 1140px;
+  --container:     780px;
+  --container-wide: 1100px;
 
-  /* Typography */
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-mono: 'Fira Code', 'Courier New', monospace;
-
-  /* Radius */
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
-  --radius-full: 9999px;
-
-  /* Transitions */
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --ease:          cubic-bezier(0.4, 0, 0.2, 1);
 }

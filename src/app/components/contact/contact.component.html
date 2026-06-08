@@ -1,51 +1,30 @@
 <section id="contact" class="contact">
   <div class="container">
 
-    <div class="section-header reveal">
-      <span class="section-tag">// get in touch</span>
-      <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
-      <p class="section-subtitle">
-        Whether you're a recruiter, a fellow engineer, or someone building something interesting with AI — my inbox is open.
-      </p>
+    <span class="section-index reveal">05 &mdash; Contact</span>
+    <h2 class="section-title reveal">Let's connect.</h2>
+
+    <p class="contact-intro reveal delay-1">
+      Whether you're a recruiter, a fellow engineer, or someone building something
+      interesting — my inbox is open. I typically respond within 24 hours.
+    </p>
+
+    <div class="contact-links reveal delay-2">
+      @for (link of links; track link.label) {
+        <a [href]="link.href" target="_blank" rel="noopener" class="contact-link">
+          <span class="link-label">{{ link.label }}</span>
+          <span class="link-value">{{ link.value }}</span>
+          <span class="link-arrow">&nearr;</span>
+        </a>
+      }
     </div>
 
-    <div class="contact-wrapper reveal delay-1">
-
-      <div class="contact-left">
-        <p class="contact-intro">
-          Whether you're a recruiter, a fellow engineer, or someone building something interesting —
-          my inbox is open. I typically respond within 24 hours.
-        </p>
-
-        <div class="contact-links">
-          @for (link of links; track link.label) {
-            <a [href]="link.href" target="_blank" rel="noopener" class="contact-link glass-card" [attr.data-color]="link.color">
-              <div class="link-icon">
-                <ng-icon [name]="link.icon" size="20"></ng-icon>
-              </div>
-              <div class="link-text">
-                <span class="link-label">{{ link.label }}</span>
-                <span class="link-value">{{ link.value }}</span>
-              </div>
-              <ng-icon name="heroArrowUpRight" size="16" class="link-arrow"></ng-icon>
-            </a>
-          }
-        </div>
-      </div>
-
-      <div class="contact-right">
-        <div class="cta-card glass-card">
-          <div class="cta-glow"></div>
-          <ng-icon name="heroChatBubbleLeftRight" class="cta-icon"></ng-icon>
-          <h3>Ready to build something great?</h3>
-          <p>I'd love to hear what you're working on. Let's talk.</p>
-          <a href="mailto:haswareamaan2003@gmail.com" class="btn btn-primary">
-            Send a Message
-            <ng-icon name="heroPaperAirplane" size="15"></ng-icon>
-          </a>
-        </div>
-      </div>
-
-    </div>
   </div>
 </section>
+
+<footer class="site-footer">
+  <div class="container-wide">
+    <span>Amaan Hasware &mdash; {{ year }}</span>
+    <span>Built with Angular</span>
+  </div>
+</footer>

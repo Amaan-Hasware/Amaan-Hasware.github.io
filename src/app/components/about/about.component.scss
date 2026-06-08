@@ -1,137 +1,62 @@
-.about { background: var(--bg-secondary); }
-
-/* Bento grid */
-.about-bento {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: auto auto auto;
-  gap: 1rem;
-  grid-template-areas:
-    "bio  stats"
-    "bio  stats"
-    "bio  stats"
-    "edu  loc"
-    "ai   ai";
+.about {
+  background: var(--bg-soft);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
 }
 
-.bento-bio        { grid-area: bio;    padding: 2rem 2.25rem; }
-.bento-stats-group{ grid-area: stats;  display: flex; flex-direction: column; gap: 0.75rem; }
-.bento-edu        { grid-area: edu; }
-.bento-location   { grid-area: loc; }
-.bento-ai         { grid-area: ai; }
+.about-body {
+  p {
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
+    font-weight: 300;
+    line-height: 1.9;
+    color: var(--text-muted);
+    max-width: 680px;
+    margin-bottom: 1.5rem;
 
-/* Bio */
-.bio-text {
-  font-size: 0.975rem;
-  color: var(--text-secondary);
-  line-height: 1.85;
-  margin-bottom: 1.1rem;
-  strong { color: var(--text-primary); font-weight: 600; }
+    &:last-child { margin-bottom: 0; }
+
+    strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+  }
+
+  margin-bottom: 4rem;
 }
 
-.bio-certs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.625rem;
-  margin-bottom: 1.75rem;
-}
-
-.cert-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.375rem;
-  padding: 0.35rem 0.75rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-full);
-  font-size: 0.78rem;
-  color: var(--text-secondary);
-  ng-icon { color: var(--accent-blue); flex-shrink: 0; }
-}
-
-.bio-cta { width: fit-content; }
-
-/* Stat cards */
-.bento-stat {
-  padding: 1.25rem;
+.about-meta {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 0.25rem;
-  flex: 1;
-
-  &[data-color='blue']   { --sc: var(--accent-blue); }
-  &[data-color='gold']   { --sc: #f59e0b; }
-  &[data-color='purple'] { --sc: var(--accent-purple); }
-
-  &:hover { border-color: var(--sc) !important; transform: translateY(-2px); }
+  gap: 0;
+  border-top: 1px solid var(--rule);
 }
 
-.stat-icon { font-size: 1.25rem; color: var(--sc, var(--accent-blue)); }
+.meta-item {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 2rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: baseline;
 
-.stat-num {
-  font-size: 2rem;
-  font-weight: 900;
-  color: var(--sc, var(--accent-blue));
-  line-height: 1;
-  font-variant-numeric: tabular-nums;
-}
-
-.stat-lbl {
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--text-muted);
-}
-
-/* Edu card */
-.bento-edu {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1.25rem 1.5rem;
-
-  .edu-icon   { font-size: 1.75rem; flex-shrink: 0; color: var(--accent-blue); }
-  .edu-degree { font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem; }
-  .edu-school { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.2rem; }
-  .edu-year   { font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-blue); }
-}
-
-/* Location card */
-.bento-location {
-  display: flex;
-  align-items: center;
-  gap: 0.875rem;
-  padding: 1.25rem 1.5rem;
-
-  .loc-icon { font-size: 1.5rem; flex-shrink: 0; color: var(--accent-cyan); }
-  .loc-city { font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.2rem; }
-  .loc-lang { font-size: 0.78rem; color: var(--text-secondary); }
-}
-
-/* AI focus card */
-.bento-ai {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.1rem 1.5rem;
-
-  .ai-icon  { font-size: 1.3rem; color: var(--accent-purple); flex-shrink: 0; }
-  .ai-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.2rem; }
-  .ai-value { font-size: 0.9rem; font-weight: 700; color: var(--accent-purple); }
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .about-bento {
+  @media (max-width: 560px) {
     grid-template-columns: 1fr;
-    grid-template-areas:
-      "bio"
-      "stats"
-      "edu"
-      "loc"
-      "ai";
+    gap: 0.35rem;
   }
-  .bento-stats-group { flex-direction: row; flex-wrap: wrap; }
-  .bento-stat { flex: 1; min-width: 120px; }
+}
+
+.meta-label {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.meta-value {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--text-muted);
 }

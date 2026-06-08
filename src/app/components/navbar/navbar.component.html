@@ -1,9 +1,7 @@
 <nav class="navbar" [class.scrolled]="isScrolled">
-  <div class="nav-container">
+  <div class="nav-inner container-wide">
 
-    <a class="nav-logo" href="#hero" (click)="closeMenu()">
-      <span class="bracket">&lt;</span>AH<span class="bracket">/&gt;</span>
-    </a>
+    <a class="nav-logo" href="#hero" (click)="closeMenu()">AH</a>
 
     <ul class="nav-links" [class.open]="menuOpen">
       @for (link of navLinks; track link.label) {
@@ -16,14 +14,14 @@
         </li>
       }
       <li>
-        <a href="mailto:haswareamaan2003@gmail.com" class="hire-btn" (click)="closeMenu()">
-          Contact Me
+        <a href="mailto:haswareamaan2003@gmail.com" class="nav-contact" (click)="closeMenu()">
+          Contact
         </a>
       </li>
     </ul>
 
     <button class="hamburger" (click)="toggleMenu()" [class.open]="menuOpen" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
+      <span></span><span></span>
     </button>
 
   </div>
