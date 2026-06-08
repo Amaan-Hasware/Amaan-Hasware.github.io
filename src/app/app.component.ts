@@ -26,24 +26,66 @@ export class AppComponent implements OnInit {
   year = new Date().getFullYear();
 
   ngOnInit() {
-    this.initScrollReveal();
+    // Small delay so Angular has rendered the DOM
+    setTimeout(() => {
+      this.initBlurReveal();
+      this.initSectionAmbient();
+    }, 120);
   }
 
-  private initScrollReveal() {
-    const observer = new IntersectionObserver(
+  // Blur-to-sharp reveal for .reveal and .rule-draw elements
+  private initBlurReveal() {
+    const revealObs = new IntersectionObserver(
       (entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
+            revealObs.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
     );
 
-    setTimeout(() => {
-      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    }, 100);
+    document.querySelectorAll('.reveal, .rule-draw').forEach(el => {
+      revealObs.observe(el);
+    });
+  }
+
+  // Section ambient spotlight: active section = full opacity, rest = dimmed
+  private initSectionAmbient() {
+    const sections = Array.from(document.querySelectorAll('section'));
+    if (sections.length === 0) return;
+
+    let hasScrolled = false;
+
+    // Only activate ambient dimming after the user starts scrolling
+    window.addEventListener('scroll', () => { hasScrolled = true; }, { once: true, passive: true });
+
+    const ambientObs = new IntersectionObserver(
+      (entries) => {
+        if (!hasScrolled) return;
+
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Dim every section, then undim the newly active one
+            sections.forEach(s => s.classList.add('section-dim'));
+            entry.target.classList.remove('section-dim');
+
+            // Highlight the section index label inside the active section
+            document.querySelectorAll('.section-index').forEach(idx => idx.classList.remove('index-active'));
+            const activeIndex = entry.target.querySelector('.section-index');
+            if (activeIndex) activeIndex.classList.add('index-active');
+          }
+        });
+      },
+      {
+        // Trigger when section enters the centre 60% of the viewport
+        rootMargin: '-20% 0px -20% 0px',
+        threshold: 0,
+      }
+    );
+
+    sections.forEach(s => ambientObs.observe(s));
   }
 }

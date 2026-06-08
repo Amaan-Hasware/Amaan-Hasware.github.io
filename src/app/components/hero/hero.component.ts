@@ -1,10 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { NgIconComponent } from '@ng-icons/core';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [NgIconComponent],
+  imports: [],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss'
 })

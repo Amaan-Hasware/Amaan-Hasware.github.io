@@ -1,85 +1,42 @@
 <section id="about" class="about">
   <div class="container">
 
-    <div class="section-header reveal">
-      <span class="section-tag">// who I am</span>
-      <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+    <span class="section-index reveal">01 &mdash; About</span>
+
+    <h2 class="section-title reveal">Who I am.</h2>
+
+    <div class="about-body reveal delay-1">
+      <p>
+        I'm a Software Engineer at <strong>Deloitte</strong> with two years of hands-on experience building
+        enterprise-grade solutions — from AI-powered full-stack applications to Angular dashboards and
+        UiPath automation workflows that process millions of records.
+      </p>
+      <p>
+        My current focus is <strong>Generative AI engineering</strong> — integrating the Anthropic Claude API
+        into production systems, engineering advanced prompting strategies, and building MCP agentic
+        workflows that connect AI directly to live business pipelines at scale.
+      </p>
+      <p>
+        I went from YouTube tutorials to shipping tools used by 20 people inside one of the world's
+        largest professional services firms. The gap between where I started and where I am now is
+        something I carry with me every day.
+      </p>
     </div>
 
-    <div class="about-bento">
-
-      <!-- Bio — large card, spans left column -->
-      <div class="bento-bio glass-card reveal">
-        <p class="bio-text">
-          I'm a Software Engineer at <strong>Deloitte</strong> with <strong>2 years of hands-on experience</strong>
-          building enterprise-grade solutions — from AI-powered full-stack applications to
-          Angular dashboards and UiPath automation workflows that process millions of records.
-        </p>
-        <p class="bio-text">
-          My current focus is <strong>Generative AI engineering</strong> — integrating the Anthropic Claude API
-          into production systems, engineering advanced prompting strategies, and building MCP agentic
-          workflows that connect AI directly to real business pipelines at scale.
-        </p>
-        <p class="bio-text">
-          I went from YouTube tutorials to shipping tools used by 20+ people inside one of the world's
-          largest professional services firms. The gap between where I started and where I am now
-          is something I carry with me every day.
-        </p>
-        <div class="bio-certs">
-          <div class="cert-chip">
-            <ng-icon name="heroCheckBadge" size="13"></ng-icon>
-            UiPath Certified RPA Associate
-          </div>
-          <div class="cert-chip">
-            <ng-icon name="heroCheckBadge" size="13"></ng-icon>
-            B.Sc. Information Technology · 2023
-          </div>
-        </div>
-        <a href="mailto:haswareamaan2003@gmail.com" class="btn btn-primary bio-cta">
-          Say Hello
-          <ng-icon name="heroPaperAirplane" size="14"></ng-icon>
-        </a>
+    <div class="about-meta reveal delay-2">
+      <div class="meta-item">
+        <span class="meta-label">Education</span>
+        <span class="meta-value">B.Sc. Information Technology &mdash; SIES College, Navi Mumbai &middot; 2020&ndash;2023</span>
       </div>
-
-      <!-- Stat cards — stacked right column -->
-      <div class="bento-stats-group reveal delay-1">
-        @for (c of counters; track c.label) {
-          <div class="bento-stat glass-card" [attr.data-color]="c.color">
-            <ng-icon [name]="c.icon" class="stat-icon"></ng-icon>
-            <span class="stat-num">{{ c.value }}{{ c.suffix }}</span>
-            <span class="stat-lbl">{{ c.label }}</span>
-          </div>
-        }
+      <div class="meta-item">
+        <span class="meta-label">Certification</span>
+        <span class="meta-value">UiPath Certified RPA Associate</span>
       </div>
-
-      <!-- Education card -->
-      <div class="bento-edu glass-card reveal delay-2">
-        <ng-icon name="heroAcademicCap" class="edu-icon"></ng-icon>
-        <div>
-          <p class="edu-degree">B.Sc. Information Technology</p>
-          <p class="edu-school">SIES College of Arts, Commerce &amp; Science · Nerul, Navi Mumbai</p>
-          <p class="edu-year">June 2020 – May 2023</p>
-        </div>
+      <div class="meta-item">
+        <span class="meta-label">Location</span>
+        <span class="meta-value">Pune, India &middot; English &amp; Hindi</span>
       </div>
-
-      <!-- Location card -->
-      <div class="bento-location glass-card reveal delay-3">
-        <ng-icon name="heroMapPin" class="loc-icon"></ng-icon>
-        <div>
-          <p class="loc-city">Pune, India</p>
-          <p class="loc-lang">English · Hindi</p>
-        </div>
-      </div>
-
-      <!-- AI focus card -->
-      <div class="bento-ai glass-card reveal delay-4">
-        <ng-icon name="heroSparkles" class="ai-icon"></ng-icon>
-        <div>
-          <p class="ai-label">Currently building with</p>
-          <p class="ai-value">Anthropic Claude API</p>
-        </div>
-      </div>
-
     </div>
+
   </div>
 </section>
