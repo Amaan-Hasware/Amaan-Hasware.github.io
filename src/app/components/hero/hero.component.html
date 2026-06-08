@@ -1,92 +1,39 @@
 <section id="hero" class="hero">
-
-  <div class="hero-bg">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="dot-grid"></div>
-  </div>
-
   <div class="container">
-    <div class="hero-layout">
 
-      <!-- LEFT: Identity -->
-      <div class="hero-left">
-        <div class="company-pill">
-          <span class="pill-dot"></span>
-          Software Engineer &nbsp;·&nbsp; Deloitte &nbsp;·&nbsp; Pune, India
-        </div>
+    <p class="hero-status">Software Engineer &mdash; Deloitte, Pune</p>
 
-        <h1 class="hero-name">
-          <span class="name-first">Amaan</span>
-          <span class="name-last gradient-text">Hasware</span>
-        </h1>
+    <h1 class="hero-name">
+      <span class="name-line">Amaan</span>
+      <span class="name-line name-italic">Hasware.</span>
+    </h1>
 
-        <div class="hero-typewriter">
-          <span class="tw-static">Building </span>
-          <span class="tw-dynamic">{{ displayText }}<span class="cursor">|</span></span>
-        </div>
+    <p class="hero-descriptor">
+      Building <span class="tw-wrap">{{ displayText }}<span class="cursor">|</span></span>
+    </p>
 
-        <div class="hero-ctas">
-          <a href="#experience" class="btn btn-primary">
-            View My Work
-            <ng-icon name="heroArrowUpRight" size="14"></ng-icon>
-          </a>
-          <a href="#contact" class="btn btn-outline">Get In Touch</a>
-        </div>
-
-        <div class="hero-socials">
-          <a href="https://www.linkedin.com/in/amaan-hasware-22630221b" target="_blank" rel="noopener" title="LinkedIn" class="social-icon">
-            <ng-icon name="simpleLinkedin" size="18"></ng-icon>
-          </a>
-          <a href="https://github.com/Amaan-Hasware" target="_blank" rel="noopener" title="GitHub" class="social-icon">
-            <ng-icon name="simpleGithub" size="18"></ng-icon>
-          </a>
-          <a href="https://www.youtube.com/@ammonation4936" target="_blank" rel="noopener" title="YouTube" class="social-icon">
-            <ng-icon name="simpleYoutube" size="18"></ng-icon>
-          </a>
-          <a href="https://open.spotify.com/show/3BWsq9f8btxopXD3wI9n0e?si=f663699231c341e0" target="_blank" rel="noopener" title="Spotify" class="social-icon">
-            <ng-icon name="simpleSpotify" size="18"></ng-icon>
-          </a>
-          <a href="mailto:haswareamaan2003@gmail.com" title="Email" class="social-icon">
-            <ng-icon name="heroEnvelope" size="18"></ng-icon>
-          </a>
-        </div>
-      </div>
-
-      <!-- RIGHT: Bento cells -->
-      <div class="hero-right">
-
-        <div class="bento-cell bento-photo">
-          <img src="images/profile.jpg" alt="Amaan Hasware" />
-          <div class="photo-overlay-tag">
-            <i class="devicon-angularjs-plain colored"></i>
-            <i class="devicon-python-plain colored"></i>
-            <span class="overlay-text">&#64; Deloitte</span>
-          </div>
-        </div>
-
-        <div class="bento-cell bento-mini" data-color="blue">
-          <span class="mini-num">2+</span>
-          <span class="mini-lbl">Years Exp.</span>
-        </div>
-
-        <div class="bento-cell bento-mini" data-color="gold">
-          <span class="mini-num">2</span>
-          <span class="mini-lbl">Awards</span>
-        </div>
-
-        <div class="bento-cell bento-mini" data-color="purple">
-          <span class="mini-num">20+</span>
-          <span class="mini-lbl">Users</span>
-        </div>
-
-      </div>
-
+    <div class="hero-ctas">
+      <a href="#experience" class="cta-link cta-primary">View Work</a>
+      <a href="mailto:haswareamaan2003&#64;gmail.com" class="cta-link">
+        <span class="email-long">haswareamaan2003&#64;gmail.com</span>
+        <span class="email-short">Email Me</span>
+      </a>
     </div>
+
+    <div class="hero-socials">
+      <a href="https://www.linkedin.com/in/amaan-hasware-22630221b" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="dot">&middot;</span>
+      <a href="https://github.com/Amaan-Hasware" target="_blank" rel="noopener">GitHub</a>
+      <span class="dot">&middot;</span>
+      <a href="https://www.youtube.com/@ammonation4936" target="_blank" rel="noopener">YouTube</a>
+      <span class="dot">&middot;</span>
+      <a href="https://open.spotify.com/show/3BWsq9f8btxopXD3wI9n0e?si=f663699231c341e0" target="_blank" rel="noopener">Spotify</a>
+    </div>
+
   </div>
 
-  <a href="#about" class="scroll-cue" aria-label="Scroll down">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+  <a href="#about" class="scroll-hint" aria-label="Scroll down">
+    <span class="scroll-line"></span>
+    <span class="scroll-label">Scroll</span>
   </a>
-
 </section>

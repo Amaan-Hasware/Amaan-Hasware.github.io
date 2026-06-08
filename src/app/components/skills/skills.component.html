@@ -1,38 +1,16 @@
 <section id="skills" class="skills">
   <div class="container">
 
-    <div class="section-header reveal">
-      <span class="section-tag">// what I work with</span>
-      <h2 class="section-title">Skills &amp; <span class="gradient-text">Expertise</span></h2>
-      <p class="section-subtitle">Technologies and tools I use daily to ship production solutions at Deloitte.</p>
-    </div>
+    <span class="section-index reveal">03 &mdash; Skills</span>
+    <h2 class="section-title reveal">What I work with.</h2>
 
-    <div class="skills-bento">
-      @for (cat of categories; track cat.title; let i = $index) {
-        <div class="skill-card glass-card reveal"
-             [class]="cat.bentoClass + ' delay-' + (i + 1)"
-             [attr.data-color]="cat.color">
-
-          <div class="card-header">
-            <ng-icon [name]="cat.icon" class="cat-icon"></ng-icon>
-            <h3 class="cat-title">{{ cat.title }}</h3>
-          </div>
-
-          <p class="cat-desc">{{ cat.description }}</p>
-
-          <div class="skill-tags">
-            @for (skill of cat.skills; track skill.name) {
-              <span class="skill-tag">
-                @if (skill.devicon) {
-                  <i [class]="skill.devicon + ' colored'"></i>
-                } @else {
-                  <ng-icon [name]="skill.icon!" class="sk-icon"></ng-icon>
-                }
-                {{ skill.name }}
-              </span>
-            }
-          </div>
+    <div class="skill-list">
+      @for (cat of categories; track cat.title; let i = $index; let last = $last) {
+        <div class="skill-row reveal" [class]="'delay-' + (i + 1)">
+          <div class="skill-row-label">{{ cat.title }}</div>
+          <div class="skill-row-items">{{ joinSkills(cat.skills) }}</div>
         </div>
+        @if (!last) { <div class="skill-rule"></div> }
       }
     </div>
 
