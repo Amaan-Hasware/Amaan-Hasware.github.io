@@ -21,55 +21,55 @@ interface SkillCategory {
 export class SkillsComponent {
   categories: SkillCategory[] = [
     {
-      title: 'AI & Generative Engineering',
+      title: 'Generative AI & LLM Engineering',
       icon: '', color: '', bentoClass: '',
       description: '',
       skills: [
         { name: 'Claude / Anthropic API' },
         { name: 'Prompt Engineering' },
-        { name: 'MCP Agentic Workflows' },
         { name: 'Few-shot & Chain-of-Thought' },
-        { name: 'Function Calling' },
-        { name: 'Tool Use' },
+        { name: 'Function Calling & Tool Use' },
+        { name: 'RAG Pipelines' },
+        { name: 'MCP Server Integration' },
       ]
     },
     {
-      title: 'Frontend & Frameworks',
+      title: 'Agentic AI & LangChain/LangGraph',
+      icon: '', color: '', bentoClass: '',
+      description: '',
+      skills: [
+        { name: 'LangGraph' },
+        { name: 'LangChain' },
+        { name: 'StateGraph & TypedDict' },
+        { name: 'Conditional Routing' },
+        { name: 'Human-in-the-Loop' },
+        { name: 'Agentic Workflow Automation' },
+      ]
+    },
+    {
+      title: 'Angular & Frontend',
       icon: '', color: '', bentoClass: '',
       description: '',
       skills: [
         { name: 'Angular v16+' },
         { name: 'React' },
         { name: 'TypeScript' },
-        { name: 'HTML & CSS' },
-        { name: 'ngx-charts' },
         { name: 'RxJS' },
+        { name: 'ngx-charts' },
+        { name: 'HTML & SCSS' },
       ]
     },
     {
-      title: 'Backend & Tools',
+      title: 'Backend, Tools & RPA',
       icon: '', color: '', bentoClass: '',
       description: '',
       skills: [
         { name: 'Python' },
-        { name: 'Flask' },
+        { name: 'Flask & FastAPI' },
         { name: 'REST APIs' },
         { name: 'GitHub' },
-        { name: 'Smartsheet' },
-        { name: 'SSO & RBAC' },
-      ]
-    },
-    {
-      title: 'RPA & Enterprise Automation',
-      icon: '', color: '', bentoClass: '',
-      description: '',
-      skills: [
         { name: 'UiPath RPA' },
-        { name: 'SAP' },
-        { name: 'NetSuite' },
-        { name: 'Workday' },
         { name: 'UiPath Orchestrator' },
-        { name: 'Excel & Outlook' },
       ]
     },
   ];

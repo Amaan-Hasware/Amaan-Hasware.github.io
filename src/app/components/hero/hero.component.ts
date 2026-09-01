@@ -9,11 +9,11 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 })
 export class HeroComponent implements OnInit, OnDestroy {
   roles = [
-    'AI-powered applications',
-    'automation workflows',
-    'enterprise dashboards',
-    'intelligent tools',
-    'full-stack solutions',
+    'agentic AI systems',
+    'LangGraph workflows',
+    'RAG pipelines',
+    'enterprise AI applications',
+    'Angular dashboards',
   ];
 
   displayText = '';
