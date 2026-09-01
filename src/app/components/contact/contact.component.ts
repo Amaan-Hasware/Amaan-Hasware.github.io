@@ -13,11 +13,6 @@ export class ContactComponent {
 
   links = [
     {
-      label: 'Email',
-      value: 'haswareamaan2003@gmail.com',
-      href: 'mailto:haswareamaan2003@gmail.com',
-    },
-    {
       label: 'LinkedIn',
       value: 'linkedin.com/in/amaan-hasware-22630221b',
       href: 'https://www.linkedin.com/in/amaan-hasware-22630221b',
